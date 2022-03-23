@@ -1,0 +1,8 @@
+@use 'src/scss/variables' as *;
+
+.charts {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: flex-start;
+}

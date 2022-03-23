@@ -1,0 +1,31 @@
+@use 'src/scss/variables' as *;
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: $border-radius;
+
+  td,
+  th {
+    padding: 8px;
+  }
+
+  tr {
+    &:nth-child(even) {
+      background-color: $bg3;
+    }
+    &:hover {
+      background-color: $bg4;
+    }
+  }
+
+  tr > th {
+    text-align: left;
+  }
+
+  tr > th > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

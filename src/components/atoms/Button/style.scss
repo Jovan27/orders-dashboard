@@ -1,0 +1,40 @@
+@use 'src/scss/variables' as *;
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white1;
+  font-weight: bold;
+  border-radius: $border-radius;
+
+  &--text {
+    border: 1px solid transparent;
+    background-color: transparent;
+  }
+  &--contained {
+    border: 1px solid $primary;
+    background-color: $primary;
+  }
+  &--outlined {
+    border: 1px solid $primary;
+    background-color: transparent;
+  }
+
+  &--md {
+    height: 48px;
+    padding: 0 32px;
+  }
+  &--sm {
+    height: 36px;
+    padding: 0 12px;
+  }
+
+  &:hover:not(:disabled) {
+    cursor: pointer;
+    background-color: $primary-light;
+  }
+  &:disabled {
+    opacity: 0.2;
+  }
+}

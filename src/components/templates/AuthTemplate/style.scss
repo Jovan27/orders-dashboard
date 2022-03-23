@@ -1,0 +1,18 @@
+@use 'src/scss/variables' as *;
+
+.auth-template {
+  place-self: center;
+
+  .credentials-form {
+    margin-bottom: 16px;
+  }
+  &__error-message {
+    color: $warning;
+    margin-bottom: 16px;
+  }
+  &__helper-text {
+    a {
+      padding: 0 8px;
+    }
+  }
+}

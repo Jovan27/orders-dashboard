@@ -1,0 +1,15 @@
+@use 'src/scss/variables' as *;
+
+.revenue-by-month {
+  .recharts-bar-rectangle {
+    fill: $primary;
+  }
+  .recharts-cartesian-axis-tick > text {
+    stroke: $white1;
+    font-size: 12px;
+  }
+  .recharts-cartesian-axis-line,
+  .recharts-cartesian-grid line {
+    stroke: transparentize($white1, $amount: 0.9);
+  }
+}

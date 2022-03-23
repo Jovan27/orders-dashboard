@@ -1,0 +1,33 @@
+@use 'src/scss/variables' as *;
+
+.input {
+  display: block;
+  height: 42px;
+  width: 100%;
+  border-radius: $border-radius;
+  background-color: inherit;
+  border: 1px solid $border-color;
+  padding: 8px;
+  outline: none;
+  min-width: 200px;
+  &:focus,
+  &:hover {
+    border: 1px solid $primary;
+  }
+  &[type='date']::-webkit-inner-spin-button,
+  &[type='date']::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+  }
+  /* Chrome, Safari, Edge, Opera */
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  &[type='number'] {
+    -moz-appearance: textfield;
+  }
+}

@@ -1,0 +1,16 @@
+.app {
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas: 'header' 'main';
+  grid-template-rows: auto 1fr;
+
+  .header {
+    grid-area: header;
+  }
+
+  .main {
+    display: grid;
+    grid-area: main;
+    padding: 48px;
+  }
+}

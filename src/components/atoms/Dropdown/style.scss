@@ -1,0 +1,61 @@
+@use 'src/scss/variables' as *;
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  min-width: 200px;
+
+  &__toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: $border-radius;
+    padding: 8px;
+    border: 1px solid $border-color;
+    background-color: transparent;
+    outline: none;
+    font-size: 16px;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+    &:hover,
+    &[aria-expanded='true'] {
+      cursor: pointer;
+      border: 1px solid $primary;
+    }
+
+    &__icon {
+      margin-left: 8px;
+    }
+  }
+
+  &__toggle[aria-expanded='false'] + &__menu {
+    opacity: 0;
+    pointer-events: none;
+  }
+  &__menu {
+    border-radius: $border-radius;
+    border: 1px solid $border-color;
+    visibility: visible;
+    transition: all 0.3s ease;
+    margin-top: 4px;
+    overflow: hidden;
+    opacity: 1;
+    overflow-y: auto;
+    background-color: $bg3;
+    list-style-type: none;
+    padding-left: 0;
+    position: absolute;
+    z-index: 2;
+
+    &__option {
+      padding: 8px 16px;
+      cursor: pointer;
+      &:hover {
+        background-color: $primary;
+      }
+    }
+  }
+}

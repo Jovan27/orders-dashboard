@@ -1,0 +1,15 @@
+.orders-table {
+  place-self: start center;
+  width: 720px;
+
+  .top-row {
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+    margin-bottom: 32px;
+  }
+
+  .pagination {
+    margin-top: 16px;
+  }
+}

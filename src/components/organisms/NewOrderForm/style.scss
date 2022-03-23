@@ -1,0 +1,10 @@
+.new-order-form {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+
+  .input,
+  .dropdown {
+    margin-bottom: 16px;
+  }
+}
